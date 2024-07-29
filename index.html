@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini-App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://api.tlgr.org/js/telegram-web-app.js"></script> <!-- Telegram SDK -->
+    <script defer src="https://apis.google.com/js/api.js"></script> <!-- Google API -->
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <h1>Welcome to Fitness Rewards</h1>
+            <p>Earn tokens by syncing your Google Fit data.</p>
+            <button id="start-button">Get Started</button>
+        </div>
+        
+        <!-- Google Fit Login Screen -->
+        <div id="google-fit-screen" class="screen hidden">
+            <h1>Connect Google Fit</h1>
+            <p>Please log in to your Google account to proceed.</p>
+            <button id="google-fit-button">Log in with Google</button>
+        </div>
+
+        <!-- Activity Stats Screen -->
+        <div id="stats-screen" class="screen hidden">
+            <h1>Your Activity Stats</h1>
+            <p id="activity-data">Fetching your activity data...</p>
+            <button id="sync-button">Sync Data</button>
+            <button id="earn-button">Earn Tokens</button>
+        </div>
+
+        <!-- Wallet Address Screen -->
+        <div id="wallet-screen" class="screen hidden">
+            <h1>Your Wallet</h1>
+            <p>Enter your Telegram Wallet address to receive tokens.</p>
+            <input type="text" id="wallet-address" placeholder="Enter wallet address">
+            <button id="save-address-button">Save Address</button>
+        </div>
+    </div>
+</body>
+</html>
