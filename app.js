@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function initGoogleFitClient() {
         gapi.client.init({
-            apiKey: 'YOUR_API_KEY',
-            clientId: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+            apiKey: 'YOUR_API_KEY', // Replace with your actual API Key if needed
+            clientId: '207424655934-368peeuhgbblfsq4eircn1pmb7q74fhr.apps.googleusercontent.com',
             discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest"],
             scope: "https://www.googleapis.com/auth/fitness.activity.read"
         }).then(() => {
